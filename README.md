@@ -1,31 +1,42 @@
-# RadiusNESS
+# RadiusNES
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
+This repository is the Angular JS part of the RadiusNES Stack. 
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+RadiusNES is a DaloRADIUS-like implementation using Node-radius as server, Express JS as API and AngularJS 2 on the front-end and MongoDB as database backend.
 
-## Code scaffolding
+## Why this stack?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+ - Node-radius: A lightweight, nodejs based RADIUS technology implementation
+ - ExpressJS: Converts the entire communication with the server into API, thus allowing whatever to consume. 
+ - AngularJS 2: I'm simply familiar with Angular 2. That's all. It could be HapiJS, React or whatnot.
+ - MongoDB: Because, well, can you suggest any all-round better for this slot?
 
-## Build
+The idea behind the stack is to ensure an entire decoupling of the moving parts, especially the frontend from the backend. Therefore, with your ExpressJS plugged into Node-radius, you have a RADIUS server serving requests via API.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+You throw behind a MongoDB backend, and you can do the 'Hotspotlogin' thing and manage network users.
 
-## Running unit tests
+The AngularJS provides a seamless browser interface for communicating with the above. At anytime, you can scratch it off and use whatever comes in two weeks time to overthrow AngularJS (will that happen?)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## What is here?
 
-## Running end-to-end tests
+This repository will house what we've come to love as the DaloRADIUS administrator pages, where creating users, seeing logged in users, creating and assigning profiles and more.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+In addition, the front-facing 'Hotspotlogin' page will be here for users wanting to use the network to authenticate.
 
-## Deploying to Github Pages
+## Structure
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+There are 3 modules:
 
-## Further help
+ 1) Admin Module: This module is responsible for doing something similar to what the DaloRADIUS Administrator pages do. 
+ 2) Radius Module: The hotspotlogin and its related pages: Self-provisioning, Voucher or Merchant forms of authentication will be here.
+ 3) Pages Module: This module will be available should you want to extend and add About, Contact, Help and whatnot pages.
 
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Each module, will have components, of which will handle specific tasks. So, for example, the Admin module has a Login Component which handles, well, Login into the Administrator dashboard.
+
+## Front-end Framework
+
+It is bootstrap. You don't like it, just `npm install` whatever you want, say Foundation Zurb, and update the `styles` parameter in `angular-cli.json` in the root directory, then rebuild the project.
+
+## License
+
+I don't know at the moment. What License do you suggest? It's definitely Open Source though.

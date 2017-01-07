@@ -1,0 +1,283 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/app/app.component.ts",
+			"settings":
+			{
+				"buffer_size": 214,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 132.0,
+		"last_filter": "Package Control: ins",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"Materi",
+				"Material Theme: Activate theme"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/khophi/Developments/RadiusNESS",
+		"/home/khophi/Developments/RadiusNESS/src",
+		"/home/khophi/Developments/RadiusNESS/src/app",
+		"/home/khophi/Developments/RadiusNESS/src/assets"
+	],
+	"file_history":
+	[
+		"/home/khophi/Developments/Daloradius/daloradius/library/exten-radius_log.php",
+		"/home/khophi/Developments/Daloradius/daloradius/library/exten-daloradius_log.php",
+		"/home/khophi/Developments/Daloradius/Daloradius.sublime-project",
+		"/home/khophi/Developments/Daloradius/daloradius/hotspotlogin/template/css/style.css",
+		"/home/khophi/Developments/Daloradius/daloradius/mng-del.php",
+		"/home/khophi/Developments/Daloradius/daloradius/hotspotlogin/template/loginform-header.php",
+		"/home/khophi/Developments/Daloradius/daloradius/hotspotlogin/template/loginform-login.php",
+		"/home/khophi/Developments/Daloradius/daloradius/hotspotlogin/template/loggingin.php",
+		"/home/khophi/Developments/Daloradius/daloradius/hotspotlogin/hotspotlogin.php",
+		"/home/khophi/Developments/Daloradius/daloradius/bill-plans-new.php",
+		"/home/khophi/Developments/Daloradius/daloradius/bill-plans-edit.php",
+		"/home/khophi/Developments/Daloradius/daloradius/include/common/printTickets.php",
+		"/home/khophi/Developments/Daloradius/daloradius/library/opendb.php",
+		"/home/khophi/Developments/Daloradius/daloradius/signup-free.backup/include/common/php-captcha.php",
+		"/home/khophi/Developments/Daloradius/daloradius/hotspotlogin/html.html",
+		"/home/khophi/Developments/Daloradius/daloradius/signup-free.backup/index.php",
+		"/home/khophi/Developments/Daloradius/daloradius/signup-free/style.css",
+		"/home/khophi/Developments/Daloradius/daloradius/signup-free/include/common/php-captcha.php",
+		"/home/khophi/Developments/Daloradius/daloradius/library/daloradius.conf.php",
+		"/home/khophi/Android/tools/NOTICE.txt",
+		"/home/khophi/Developments/Websites/khophi.co/index.html",
+		"/home/khophi/.config/sublime-text-3/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"currency",
+			"res",
+			"loginpath",
+			"split",
+			"\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/app/app.component.ts",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								187,
+								187
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Radiusness.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"exten-radius",
+				"daloradius/library/exten-radius_log.php"
+			],
+			[
+				"exten-",
+				"daloradius/library/exten-daloradius_log.php"
+			],
+			[
+				"ticket",
+				"daloradius/include/common/printTickets.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Developments/RadiusNess/RadiusNess.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 267.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
