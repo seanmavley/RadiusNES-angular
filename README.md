@@ -39,4 +39,4 @@ It is bootstrap. You don't like it, just `npm install` whatever you want, say Fo
 
 ## License
 
-I don't know at the moment. What License do you suggest? It's definitely Open Source though.
+See the LICENSE file
