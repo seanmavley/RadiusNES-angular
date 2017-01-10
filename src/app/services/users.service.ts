@@ -16,7 +16,7 @@ export class UsersService {
   }
 
   getUsers(): Observable<boolean> {
-    let headers = new Headers({ 'Authorization': 'Bearer' + this.Auth.token });
+    let headers = new Headers({ 'Authorization': this.Auth.token });
     let options = new RequestOptions( { headers: headers });
 
     return this.http.get(apiURL, options)
@@ -24,11 +24,14 @@ export class UsersService {
   }
 
   createUser(formData) {
-    let headers = new Headers({ 'Authorization': 'Bearer' + this.Auth.token });
+    let headers = new Headers({ 'Authorization': this.Auth.token });
     let options = new RequestOptions( { headers: headers });
 
     return this.http.post(apiURL, formData, options)
-      .map((res: Response) => res.json());
+      .map((res: Response) => { 
+        console.log(res.json());
+        return res.json();
+      });
   }
 
 }

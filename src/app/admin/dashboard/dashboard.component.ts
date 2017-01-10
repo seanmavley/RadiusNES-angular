@@ -37,10 +37,12 @@ export class DashboardComponent implements OnInit {
   onSubmit() {
     console.log(this.model);
     this.users.createUser(this.model)
-       .subscribe(res => {
-         if (res.success) {
+       .subscribe((res) => {
+         if (res) {
+           console.log(res);
            console.log('You should redirect to recently created user page');
          } else {
+           console.log(res);
            console.log('It failed, remain on page.');
          }
        })
