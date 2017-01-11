@@ -8,12 +8,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/admin">RadiusNESS</a>
+      <a class="navbar-brand" [routerLink]="['/admin']">RadiusNES</a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="/admin/management">Management</a></li>
+        <li><a [routerLink]="['management']">Management</a></li>
         <li><a href="#">Reports</a></li>
         <li><a href="#">Accounting</a></li>
         <li><a href="#">Insights</a></li>

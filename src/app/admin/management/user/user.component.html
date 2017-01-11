@@ -37,8 +37,41 @@
     </table>
   </div>
   <div class="col-sm-6">
-    <p class="lead text-center">
+    <p class="lead">
       Quick Add User
+      <a [routerLink]="['list']" class="pull-right"><small>Users</small></a>
     </p>
+    <form #formData="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="model.fullname" id="fullname" aria-label='fullname' placeholder="Enter Full Name (optional)" name="fullname">
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" class="form-control" [(ngModel)]="model.username" id="username" aria-label='Username' placeholder="Username" name="username" required>
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-default" (click)="randomUsername(formData)">Random</button>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <input type="text" id="password" [(ngModel)]="model.password" placeholder="Password" aria-label='Password' class="form-control" name="password" required>
+          <div class="input-group-btn">
+            <a href="javascript:void(0);" class="btn btn-default" (click)="randomPassword()">Random</a>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="profile">Select Group</label>
+        <select class="form-control" id="profile" name="model.profile" (ngModel)="model.profile">
+          <option>30Gig1Week</option>
+          <option>10Gig30Days</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <a [routerLink]="['create']" class="btn btn-link">Advanced Add User</a>
+        <button type="submit" class="btn btn-primary pull-right" [disabled]='!formData.valid'>Create user</button>
+      </div>
+    </form>
   </div>
 </div>

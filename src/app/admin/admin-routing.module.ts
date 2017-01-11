@@ -11,7 +11,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 // Management Related routes
 import { ManagementComponent } from './management/management.component';
 import { ProfileComponent } from './management/profile/profile.component';
-import { UserComponent } from './management/user/user.component';
+import { UserDash } from './management/user/user.component';
+
+// User Add Edit 
+import { UserList, UserComponent, UserCreate, UserDetail, UserEdit } from './management/user/user.component';
 
 const routes: Routes = [
   // Admin page will be LOGGED IN state of the Administrator. If not authenticated
@@ -23,8 +26,17 @@ const routes: Routes = [
           { path: 'management', component: ManagementComponent,
           // /admin/management
           children: [
+            // /admin/management/user
+            { path: 'users', component: UserDash, 
+            children: [
+              // /admin/management/user/*
+              { path: '', component: UserComponent },
+              { path: 'list', component: UserList },
+              { path: 'create', component: UserCreate },
+              { path: 'edit', component: UserEdit },
+              { path: 'detail', component: UserDetail }
+            ]},
             { path: 'profile', component: ProfileComponent },
-            { path: '', component: UserComponent }
           ]}
         ]
      },

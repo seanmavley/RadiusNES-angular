@@ -14,6 +14,7 @@
   <div class="col-sm-6">
     <p class="lead">
       Quick Add User
+      <a [routerLink]="['management/users/list']" class="pull-right"><small>Users</small></a>
     </p>
     <form #formData="ngForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
@@ -43,7 +44,7 @@
         </select>
       </div>
       <div class="form-group">
-        <a href="#" class="btn btn-link">Advanced Add User</a>
+        <a [routerLink]="['management/users/create']" class="btn btn-link">Advanced Add User</a>
         <button type="submit" class="btn btn-primary pull-right" [disabled]='!formData.valid'>Create user</button>
       </div>
     </form>

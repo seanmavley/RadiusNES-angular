@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
+import { HelperService } from '../../services/helpers.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,27 +12,16 @@ export class DashboardComponent implements OnInit {
   model: any = {};
 
   constructor(
-    private users: UsersService ) { }
+    private users: UsersService, private helper: HelperService ) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   randomUsername() {
-    this.model.username = this.randomize();
+    this.model.username = this.helper.randomize();
   }  
 
   randomPassword() {
-    this.model.password = this.randomize();
-  }
-
-  // tuck this function somewhere nicer 
-  // for reusability
-  randomize() {
-    let chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let result = '';
-    let length = 4;
-    for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
-    return result;
+    this.model.password = this.helper.randomize();
   }
 
   onSubmit() {
@@ -43,6 +33,7 @@ export class DashboardComponent implements OnInit {
            console.log('You should redirect to recently created user page');
          } else {
            console.log(res);
+           console.log('Maybe relogin. Authentication has expired serverside!');
            console.log('It failed, remain on page.');
          }
        })
