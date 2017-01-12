@@ -11,7 +11,7 @@ import { HelperService } from '../../../services/helpers.service';
 
 @Component({
   selector: 'user-dash',
-  templateUrl: './user.dash.html',
+  templateUrl: './user-dash.component.html',
   styleUrls: ['./user.component.css']
 })
 
@@ -22,7 +22,7 @@ export class UserDash implements OnInit{
 
 @Component({
   selector: 'user-list',
-  templateUrl: './user.list.html',
+  templateUrl: './user-list.component.html',
 })
 
 export class UserList implements OnInit {
@@ -74,7 +74,7 @@ model: any = {};
 // This page has all the nitty gritty details required to create a User
 @Component({
   selector: 'user-create',
-  templateUrl: './user.create.component.html',
+  templateUrl: './user-create.component.html',
 })
 
 export class UserCreate implements OnInit {
@@ -88,7 +88,7 @@ export class UserCreate implements OnInit {
 // USER Detail
 @Component({
   selector: 'app-detail',
-  templateUrl: './user.detail.component.html',
+  templateUrl: './user-detail.component.html',
 })
 
 export class UserDetail implements OnInit {
@@ -106,7 +106,7 @@ export class UserDetail implements OnInit {
 // USER edit
 @Component({
   selector: 'user-edit',
-  templateUrl: './user.edit.component.html',
+  templateUrl: './user-edit.component.html',
 })
 
 export class UserEdit implements OnInit {

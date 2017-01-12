@@ -1,0 +1,145 @@
+<div>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#accountinfo" aria-controls="accountinfo" role="tab" data-toggle="tab">Account & User Info</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Attributes</a></li>
+  </ul>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="accountinfo">
+      <hr>
+      <div class="row">
+        <div class="col-sm-7">
+          <form class="">
+            <p class="lead">Authentication Type</p>
+            <label class="radio-inline">
+              <input type="radio" name="optradio">Username
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optradio">MAC Address
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="optradio">Pin Code
+            </label>
+          </form>
+          <hr>
+          <div class="col-sm-12">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="username" class="col-sm-2 control-label">Username</label>
+                <div class="col-sm-10">
+                  <div class="input-group">
+                    <input type="Username" class="form-control" id="username" name="username" placeholder="Username">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default">Random</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="password" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-default">Random</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="profile" class="col-sm-2 control-label">Select Group</label>
+                <div class="col-sm-10">
+                  <select class="form-control" id="profile" name="profile">
+                    <option>30Gig1Week</option>
+                    <option>10Gig30Days</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-default pull-right">Save User</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <form>
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Your Full name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" class="form-control" id="company" name="company" placeholder="Your Full name">
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" class="form-control" id="phone" name="phone" placeholder="Your Full name">
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <textarea class="form-control" rows="3" id="address" name="address"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" class="form-control" id="city" name="city" placeholder="Your Full name">
+            </div>
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" class="form-control" id="state" name="state" placeholder="Your Full name">
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <input type="text" class="form-control" id="country" name="country" placeholder="Your Full name">
+            </div>
+            <div class="form-group">
+              <label for="zip">Zip</label>
+              <input type="text" class="form-control" id="zip" name="zip" placeholder="Your Full name">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-default pull-right">Save User</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="messages">
+      <hr>
+      <div class="row">
+        <div class="col-sm-6">
+          <form>
+            <div class="form-group">
+              <label class="for">Select Attribute</label>
+              <input type="text" placeholder="Start Typing" name="chooseAttribute" class="form-control">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-default pull-right">Add Attribute</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-sm-6">
+          <form>
+            <div class="form-group">
+              <label class="for">Attribute</label>
+              <input type="text" name="attribute" class="form-control">
+            </div>            
+            <div class="form-group">
+              <label class="for">Value</label>
+              <input type="text" name="attributeValue" class="form-control">
+            </div>
+            <div class="form-group">
+              <a href="#" class="btn btn-defaut">Remove</a>
+              <a href="#" class="btn btn-defaut">Add new</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

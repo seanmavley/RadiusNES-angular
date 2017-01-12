@@ -1,3 +1,121 @@
-<p>
-  hotspotlogin works!
-</p>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">HotspotLogin</a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Pricing & Bundles</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Free Browsing <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Google</a></li>
+            <li><a href="#">Wikipedia</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Khophi's Blog</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="">Logout</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <p>
+        <a href="#" class="btn btn-lg btn-primary btn-block"><span class="glyphicon glyphicon-cloud" style="font-size:15px;" aria-hidden="true"></span> Free Browsing <span class="glyphicon glyphicon-cloud" style="font-size:15px;" aria-hidden="true"></span></a>
+      </p>
+      <p class="text-center">
+        Click to activate free browsing.
+      </p>
+    </div>
+    <div class="col-sm-6 col-sm-offset-3">
+      <hr>
+      <p class="text-center">
+        Or enter your "Username" and "Password" to start browsing.
+      </p>
+      <hr>
+      <form name="form1" method="post" action="">
+        <input type="hidden" name="challenge" value="$challenge">
+        <input type="hidden" name="uamip" value="$uamip">
+        <input type="hidden" name="uamport" value="$uamport">
+        <input type="hidden" name="userurl" value="$userurl">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" class="form-control" id="username" placeholder="Username" name="UserName" size="20" maxlength="128">
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" name="Password" placeholder="Password" size="20" maxlength="128">
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary btn-lg" value="Login" name="button" value="Login">
+          <a href="#" data-toggle="modal" data-target="#purchase" class="btn btn-link pull-right">I don"t have the code.</a>
+        </div>
+        <p>
+          By using AlwaysOn, you agree to the <a href="https://blog.khophi.co/terms-use-hotspot-system/" target="new">Terms of Use</a>.
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="promo" tabindex="-1" role="dialog" aria-labelledby="About AlwaysOn">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title" id="About AlwaysOn"><strong>AlwaysOn Free for Today</strong></h3>
+      </div>
+      <div class="modal-body">
+        <h3>Today is Free Browsing</h3>
+        <p class="lead">
+          From <strong>23-26 December</strong>, AlwaysOn will be free for all. Just connect, claim your free sign in, and enjoy browsing.
+        </p>
+        <p class="lead">
+          Invite your friends to join AlwaysOn too.
+        </p>
+        <p>
+          <a href="#" class="btn btn-primary btn-lg">Claim your browsing code</a>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Or login with your purchased code</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class='modal fade' id='purchase' tabindex='-1' role='dialog' aria-labelledby='Purchase AlwaysOn'>
+  <div class='modal-dialog' role='document'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>&times;</span></button>
+        <h3 class='modal-title' id='Purchase AlwaysOn'><strong>Buy AlwaysOn Bundle</strong></h3>
+      </div>
+      <div class='modal-body'>
+        <p class='lead'>
+          Ask at the nearest shop for a AlwaysOn Wi-Fi Bundle or call 026.920.1707 for more details.
+        </p>
+        <p class='lead'>
+          <a href='https://blog.khophi.co/how-to-connect-to-alwayson/' target='new'>Learn how to log into AlwaysOn</a> after purchasing the bundles.
+        </p>
+      </div>
+      <div class='modal-footer'>
+        <button type='button' class='btn btn-default' data-dismiss='modal'>Close</button>
+      </div>
+    </div>
+  </div>
+</div>
