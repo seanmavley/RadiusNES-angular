@@ -49,18 +49,18 @@
         Or enter your "Username" and "Password" to start browsing.
       </p>
       <hr>
-      <form name="form1" method="post" action="">
+      <form name="form1" #formData="ngForm" (ngSubmit)="onSubmit(formData.value)">
         <input type="hidden" name="challenge" value="$challenge">
         <input type="hidden" name="uamip" value="$uamip">
         <input type="hidden" name="uamport" value="$uamport">
         <input type="hidden" name="userurl" value="$userurl">
         <div class="form-group">
           <label for="username">Username:</label>
-          <input type="text" class="form-control" id="username" placeholder="Username" name="UserName" size="20" maxlength="128">
+          <input type="text" class="form-control" [ngModel]="formData.username" id="username" placeholder="Username" name="username" size="20" maxlength="128">
         </div>
         <div class="form-group">
           <label for="password">Password:</label>
-          <input type="password" class="form-control" name="Password" placeholder="Password" size="20" maxlength="128">
+          <input type="password" class="form-control" [ngModel]="formData.password" name="password" placeholder="Password" size="20" maxlength="128">
         </div>
         <div class="form-group">
           <input type="submit" class="btn btn-primary btn-lg" value="Login" name="button" value="Login">

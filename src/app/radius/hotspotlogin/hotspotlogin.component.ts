@@ -24,4 +24,15 @@ export class HotspotloginComponent implements OnInit {
     console.log(this.param);
   }
 
+  onSubmit(formData) {
+
+    function extend(obj, src) {
+      Object.keys(src).forEach(function(key) { obj[key] = src[key]; });
+      return obj;
+    }
+
+    let extended = extend(formData, this.param);
+    console.log(extended);
+  }
+
 }
