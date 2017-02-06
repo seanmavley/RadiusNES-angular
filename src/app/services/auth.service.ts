@@ -15,6 +15,17 @@ export class AuthenticationService {
 		this.token = currentUser && currentUser.token;
 	}
 
+	userLogin(formData: Object):Observable<Response> {
+		console.log('User login run');
+		return this.http.post(apiURL + '/api/logon', formData)
+			.map((response: Response) => {
+				return response.json();
+			})
+			.catch((error) => {
+				return Observable.throw(error.json().error || 'Server error');
+			})
+	}
+
 	login(email: string, password: string): Observable<boolean> {
 
 		// let headers = new Headers({ 'Content-Type': 'application/json' });

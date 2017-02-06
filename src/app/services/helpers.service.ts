@@ -13,4 +13,10 @@ export class HelperService {
     return result;
   }
 
+ // useful for extending an object to another object
+ extend(obj, src) {
+    Object.keys(src).forEach(function(key) { obj[key] = src[key]; });
+    return obj;
+  }
+
 }

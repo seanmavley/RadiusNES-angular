@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
+import { HelperService } from '../../services/helpers.service';
+import { AuthenticationService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-hotspotlogin',
@@ -12,7 +14,10 @@ export class HotspotloginComponent implements OnInit {
   private subscription: Subscription;
   param: string;
 
-  constructor(private route: ActivatedRoute) {
+  constructor(
+    public auth: AuthenticationService,
+    private route: ActivatedRoute,
+    public helper: HelperService) {
     this.subscription = route.queryParams.subscribe(
         (queryParams: any) => {
           this.param = queryParams;
@@ -25,14 +30,12 @@ export class HotspotloginComponent implements OnInit {
   }
 
   onSubmit(formData) {
-
-    function extend(obj, src) {
-      Object.keys(src).forEach(function(key) { obj[key] = src[key]; });
-      return obj;
-    }
-
-    let extended = extend(formData, this.param);
+    let extended = this.helper.extend(formData, this.param);
     console.log(extended);
+    this.auth.userLogin(extended)
+      .subscribe((result) => {
+        console.log(result);
+      })
   }
 
 }

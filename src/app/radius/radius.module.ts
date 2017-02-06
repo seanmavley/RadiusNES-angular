@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { RadiusRoutingModule } from './radius-routing.module';
 import { HotspotloginComponent } from './hotspotlogin/hotspotlogin.component';
 
-import { HexhelperService } from '../services/hexhelper.service';
 
 @NgModule({
   imports: [
@@ -13,6 +12,6 @@ import { HexhelperService } from '../services/hexhelper.service';
     FormsModule
   ],
   declarations: [HotspotloginComponent],
-  providers: [HexhelperService]
+  providers: []
 })
 export class RadiusModule { }
