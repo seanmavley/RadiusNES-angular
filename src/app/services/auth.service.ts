@@ -15,11 +15,12 @@ export class AuthenticationService {
 		this.token = currentUser && currentUser.token;
 	}
 
-	userLogin(formData: Object):Observable<Response> {
-		console.log('User login run');
+	userLogin(formData: Object):Observable<any> {
 		return this.http.post(apiURL + '/api/logon', formData)
 			.map((response: Response) => {
-				return response.json();
+				if (response.json().success) {
+					return response.json();
+				}
 			})
 			.catch((error) => {
 				return Observable.throw(error.json().error || 'Server error');

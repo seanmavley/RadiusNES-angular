@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import { HelperService } from '../../services/helpers.service';
 import { AuthenticationService } from '../../services/auth.service';
@@ -15,6 +15,7 @@ export class HotspotloginComponent implements OnInit {
   param: string;
 
   constructor(
+    public router: Router,
     public auth: AuthenticationService,
     private route: ActivatedRoute,
     public helper: HelperService) {
@@ -35,6 +36,9 @@ export class HotspotloginComponent implements OnInit {
     this.auth.userLogin(extended)
       .subscribe((result) => {
         console.log(result);
+        console.log(`${result.uamip }:${result.uamport}`);
+        // this.router.navigateByUrl(`http://${result.uamip}:${result.uamport}/logon`);
+        window.location.href = `http://${result.uamip }:${result.uamport}/logon?username=${result.username}&password=${result.pappassword}`;
       })
   }
 
